@@ -1,0 +1,156 @@
+@font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:400;font-display:block;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.eot);src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.woff) format("woff"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.ttf) format("truetype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:"Font Awesome 5 Brands"}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:block;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-regular-400.eot);src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-regular-400.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-regular-400.woff) format("woff"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-regular-400.ttf) format("truetype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-regular-400.svg#fontawesome) format("svg")}.fab,.far{font-weight:400}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:block;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.eot);src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.woff) format("woff"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.ttf) format("truetype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family:"Font Awesome 5 Free"}.fa,.fas{font-weight:900}
+
+/* Global Styles */
+
+html{
+    --container-width: 1100px;
+    --topbar-bg: #013870;
+    --topbar-link-color: #fff;
+    --topbar-link-hover-color: #01e08f;
+    --header-bg: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.topbar .container, .header-area .container{
+    width: var(--container-width);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* Top bar */
+
+.social a:before{
+    display: inline-block;
+    font-family: "Font Awesome 5 Brands";
+    font-style: normal;
+    font-weight: 400;
+}
+
+.facebook a:before{
+    content: '\f09a';
+}
+
+.twitter a:before{
+    content: '\f099';
+}
+
+.youtube a:before{
+    content: '\f167';
+}
+
+.instagram a:before{
+    content: '\f16d';
+}
+
+.topbar{
+    background-color: var(--topbar-bg);
+    height: 26px;
+    font-size: 12px;
+}
+
+.topbar-ul li{
+    display: inline-block;
+    line-height: 26px;
+}
+
+.topbar-ul li a{
+    color: var(--topbar-link-color);
+}
+
+.topbar-ul li a:hover{
+    color: var(--topbar-link-hover-color);
+}
+
+.topbar-menu li{
+    padding: 0 15px 0 0;
+}
+
+.topbar-social li{
+    padding: 0 0 0 7px;
+}
+
+/* Header Area */
+
+.header-area{
+    background-color: var(--header-bg);
+    margin: 15px 0;
+}
+
+.header-logo img{
+    max-width: 170px;
+}
+
+.header-logo, .header-banner{
+    margin: auto 0;
+}
+
+
+/* Media queries */
+@media(max-width: 1150px){
+    .topbar .container, .header-area .container{
+        width: 100%;
+    }
+
+    .topbar-menu, .topbar-social{
+        margin: 0 15px;
+    }
+
+    .header-logo img{
+        max-width: 150px;
+    }
+
+    .header-logo, .header-banner{
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 992px){
+    .header-logo{
+        display: none;
+    }
+
+    .header-banner{
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-area .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 768px){
+    .topbar{
+        display: none;
+    }
+
+    .header-area{
+        margin: 0;
+    }
+}
