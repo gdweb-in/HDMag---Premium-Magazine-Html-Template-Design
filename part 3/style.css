@@ -38,14 +38,6 @@ img{
     height: auto;
 }
 
-.fa{
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    font-style: normal;
-    font-weight: 900;
-    font-style: 16px;
-}
-
 .container{
     width: var(--container-width);
     margin: 0 auto;
